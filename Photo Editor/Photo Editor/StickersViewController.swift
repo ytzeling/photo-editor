@@ -7,6 +7,7 @@
 //  Credit https://github.com/AhmedElassuty/IOS-BottomSheet
 
 import UIKit
+import SDWebImage
 
 class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var headerView: UIView!
@@ -19,7 +20,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var emojisDelegate: EmojisCollectionViewDelegate!
     
-    var stickers : [UIImage] = []
+    var stickersURL: [String] = []
     var stickersViewControllerDelegate : StickersViewControllerDelegate?
     
     let screenSize = UIScreen.main.bounds.size
@@ -217,11 +218,11 @@ extension StickersViewController: UIScrollViewDelegate {
 extension StickersViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stickers.count
+        return stickersURL.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        stickersViewControllerDelegate?.didSelectImage(image: stickers[indexPath.item])
+        stickersViewControllerDelegate?.didSelectImage(url: stickersURL[indexPath.item])
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -231,7 +232,7 @@ extension StickersViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = "StickerCollectionViewCell"
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! StickerCollectionViewCell
-        cell.stickerImage.image = stickers[indexPath.item]
+        cell.stickerImage.sd_setImage(with: URL(string: stickersURL[indexPath.item]), completed: nil)
         return cell
     }
     

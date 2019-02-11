@@ -42,6 +42,8 @@
 		0565134B1EF489CD009EA38F /* PhotoEditor+Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513431EF489CD009EA38F /* PhotoEditor+Controls.swift */; };
 		0565134C1EF489CD009EA38F /* PhotoEditor+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513441EF489CD009EA38F /* PhotoEditor+Crop.swift */; };
 		0565134D1EF489CD009EA38F /* PhotoEditor+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513451EF489CD009EA38F /* PhotoEditor+Font.swift */; };
+		056FF84122116E4D003E532F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056FF84022116E4D003E532F /* ImageIO.framework */; };
+		056FF84422117925003E532F /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056FF84322117924003E532F /* SDWebImage.framework */; };
 		059EA71D1EACB8790072C0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059EA71C1EACB8790072C0FE /* AppDelegate.swift */; };
 		059EA7241EACB8790072C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059EA7231EACB8790072C0FE /* Assets.xcassets */; };
 		059EA7271EACB8790072C0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059EA7251EACB8790072C0FE /* LaunchScreen.storyboard */; };
@@ -83,6 +85,8 @@
 		056513431EF489CD009EA38F /* PhotoEditor+Controls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoEditor+Controls.swift"; sourceTree = "<group>"; };
 		056513441EF489CD009EA38F /* PhotoEditor+Crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoEditor+Crop.swift"; sourceTree = "<group>"; };
 		056513451EF489CD009EA38F /* PhotoEditor+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhotoEditor+Font.swift"; sourceTree = "<group>"; };
+		056FF84022116E4D003E532F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		056FF84322117924003E532F /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		059EA7191EACB8790072C0FE /* Photo Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		059EA71C1EACB8790072C0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		059EA7231EACB8790072C0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,17 +99,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056FF84422117925003E532F /* SDWebImage.framework in Frameworks */,
+				056FF84122116E4D003E532F /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		056FF83F22116E4C003E532F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				056FF84322117924003E532F /* SDWebImage.framework */,
+				056FF84022116E4D003E532F /* ImageIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		059EA7101EACB8780072C0FE = {
 			isa = PBXGroup;
 			children = (
 				059EA71B1EACB8790072C0FE /* Photo Editor */,
 				059EA71A1EACB8790072C0FE /* Products */,
+				056FF83F22116E4C003E532F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -403,6 +419,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B8BKM8368H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Photo Editor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -418,6 +439,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B8BKM8368H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Photo Editor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

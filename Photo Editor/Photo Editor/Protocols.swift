@@ -43,6 +43,10 @@ protocol StickersViewControllerDelegate {
      */
     func didSelectImage(image: UIImage)
     /**
+     - Parameter url: selected image url from StickersViewController
+     */
+    func didSelectImage(url: String)
+    /**
      StickersViewController did Disappear
      */
     func stickersViewDidDisappear()
