@@ -13,15 +13,17 @@ import UIKit
  - didSelectImage
  - stickersViewDidDisappear
  */
-
-public protocol PhotoEditorDelegate {
+@objc
+public protocol PhotoEditorDelegate: NSObjectProtocol {
     /**
      - Parameter image: edited Image
      */
+    @objc(doneEditingImage:)
     func doneEditing(image: UIImage)
     /**
      StickersViewController did Disappear
      */
+    @objc(canceledEditing)
     func canceledEditing()
 }
 
