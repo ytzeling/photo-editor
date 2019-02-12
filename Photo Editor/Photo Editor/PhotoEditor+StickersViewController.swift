@@ -81,6 +81,8 @@ extension PhotoEditorViewController: StickersViewControllerDelegate {
         imageView.center = canvasImageView.center
         
         self.canvasImageView.addSubview(imageView)
+        //Gestures
+        addGestures(view: imageView)
     }
     
     func stickersViewDidDisappear() {
