@@ -8,13 +8,13 @@
 
 import UIKit
 
-public protocol CropViewControllerDelegate: class {
-    func cropViewController(_ controller: CropViewController, didFinishCroppingImage image: UIImage, transform: CGAffineTransform, cropRect: CGRect)
-    func cropViewControllerDidCancel(_ controller: CropViewController)
+public protocol PhotoEditorCropViewControllerDelegate: class {
+    func cropViewController(_ controller: PhotoEditorCropViewController, didFinishCroppingImage image: UIImage, transform: CGAffineTransform, cropRect: CGRect)
+    func cropViewControllerDidCancel(_ controller: PhotoEditorCropViewController)
 }
 
-open class CropViewController: UIViewController {
-    open weak var delegate: CropViewControllerDelegate?
+open class PhotoEditorCropViewController: UIViewController {
+    open weak var delegate: PhotoEditorCropViewControllerDelegate?
     open var image: UIImage? {
         didSet {
             cropView?.image = image
@@ -86,12 +86,12 @@ open class CropViewController: UIViewController {
 
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.toolbar.isTranslucent = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(CropViewController.cancel(_:)))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(CropViewController.done(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(PhotoEditorCropViewController.cancel(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(PhotoEditorCropViewController.done(_:)))
         
         if self.toolbarItems == nil {
             let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-            let constrainButton = UIBarButtonItem(title: "Constrain", style: .plain, target: self, action: #selector(CropViewController.constrain(_:)))
+            let constrainButton = UIBarButtonItem(title: "Constrain", style: .plain, target: self, action: #selector(PhotoEditorCropViewController.constrain(_:)))
             toolbarItems = [flexibleSpace, constrainButton, flexibleSpace]
         }
         

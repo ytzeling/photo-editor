@@ -21,7 +21,7 @@
 		056513241EF489B4009EA38F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513131EF489B4009EA38F /* GradientView.swift */; };
 		056513251EF489B4009EA38F /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513141EF489B4009EA38F /* CropView.swift */; };
 		056513261EF489B4009EA38F /* CropRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513151EF489B4009EA38F /* CropRectView.swift */; };
-		056513271EF489B4009EA38F /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513161EF489B4009EA38F /* CropViewController.swift */; };
+		056513271EF489B4009EA38F /* PhotoEditorCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513161EF489B4009EA38F /* PhotoEditorCropViewController.swift */; };
 		056513281EF489B4009EA38F /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513171EF489B4009EA38F /* UIImage+Crop.swift */; };
 		056513291EF489B4009EA38F /* ResizeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056513181EF489B4009EA38F /* ResizeControl.swift */; };
 		056513341EF489C0009EA38F /* StickersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0565132A1EF489C0009EA38F /* StickersViewController.xib */; };
@@ -64,7 +64,7 @@
 		056513131EF489B4009EA38F /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		056513141EF489B4009EA38F /* CropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropView.swift; sourceTree = "<group>"; };
 		056513151EF489B4009EA38F /* CropRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropRectView.swift; sourceTree = "<group>"; };
-		056513161EF489B4009EA38F /* CropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		056513161EF489B4009EA38F /* PhotoEditorCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoEditorCropViewController.swift; sourceTree = "<group>"; };
 		056513171EF489B4009EA38F /* UIImage+Crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
 		056513181EF489B4009EA38F /* ResizeControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeControl.swift; sourceTree = "<group>"; };
 		0565132A1EF489C0009EA38F /* StickersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickersViewController.xib; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				056513131EF489B4009EA38F /* GradientView.swift */,
 				056513141EF489B4009EA38F /* CropView.swift */,
 				056513151EF489B4009EA38F /* CropRectView.swift */,
-				056513161EF489B4009EA38F /* CropViewController.swift */,
+				056513161EF489B4009EA38F /* PhotoEditorCropViewController.swift */,
 				056513171EF489B4009EA38F /* UIImage+Crop.swift */,
 				056513181EF489B4009EA38F /* ResizeControl.swift */,
 				059EA71C1EACB8790072C0FE /* AppDelegate.swift */,
@@ -273,7 +273,7 @@
 				0565134C1EF489CD009EA38F /* PhotoEditor+Crop.swift in Sources */,
 				056513491EF489CD009EA38F /* PhotoEditor+StickersViewController.swift in Sources */,
 				0565131D1EF489B4009EA38F /* EmojiCollectionViewCell.swift in Sources */,
-				056513271EF489B4009EA38F /* CropViewController.swift in Sources */,
+				056513271EF489B4009EA38F /* PhotoEditorCropViewController.swift in Sources */,
 				0565134D1EF489CD009EA38F /* PhotoEditor+Font.swift in Sources */,
 				0565131C1EF489B4009EA38F /* ColorsCollectionViewDelegate.swift in Sources */,
 				0565131E1EF489B4009EA38F /* EmojisCollectionViewDelegate.swift in Sources */,
