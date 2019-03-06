@@ -1,16 +1,25 @@
 PODS:
-  - iOSPhotoEditor (0.5)
+  - iOSPhotoEditor (0.6):
+    - SDWebImage
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
 
 DEPENDENCIES:
-  - iOSPhotoEditor
+  - iOSPhotoEditor (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - iOSPhotoEditor
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  iOSPhotoEditor:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  iOSPhotoEditor: 0ddc84bcef9fe73fe8cc45ac999b89e0aa207aea
+  iOSPhotoEditor: 1bad1f71362556484ddba66e13339d32a75c1d9b
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
 
-PODFILE CHECKSUM: b3b33da00e571f79c0e6db13cf8c1bf38234ee5b
+PODFILE CHECKSUM: 01caa5bdc3b56815841a7c7bede876416625235a
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.0
