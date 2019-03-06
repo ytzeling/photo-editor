@@ -17,8 +17,8 @@ extension PhotoEditorViewController {
         self.canvasImageView.isUserInteractionEnabled = false
         stickersViewController.stickersViewControllerDelegate = self
         
-        for sticker in self.stickersURL {
-            stickersViewController.stickersURL.append(sticker)
+        for sticker in self.stickers {
+            stickersViewController.stickers.append(sticker)
         }
         self.addChild(stickersViewController)
         self.view.addSubview(stickersViewController.view)

@@ -20,7 +20,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var emojisDelegate: EmojisCollectionViewDelegate!
     
-    var stickersURL: [String] = []
+    var stickers: [Any] = []
     var stickersViewControllerDelegate : StickersViewControllerDelegate?
     
     let screenSize = UIScreen.main.bounds.size
@@ -218,11 +218,16 @@ extension StickersViewController: UIScrollViewDelegate {
 extension StickersViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stickersURL.count
+        return stickers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        stickersViewControllerDelegate?.didSelectImage(url: stickersURL[indexPath.item])
+        if let stickerURL = stickers[indexPath.item] as? String {
+            stickersViewControllerDelegate?.didSelectImage(url: stickerURL)
+        } else if let sticker = stickers[indexPath.item] as? UIImage {
+            stickersViewControllerDelegate?.didSelectImage(image: sticker)
+        }
+
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -232,7 +237,12 @@ extension StickersViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = "StickerCollectionViewCell"
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! StickerCollectionViewCell
-        cell.stickerImage.sd_setImage(with: URL(string: stickersURL[indexPath.item]), completed: nil)
+        if let stickerURL = stickers[indexPath.item] as? String {
+            cell.stickerImage.sd_setImage(with: URL(string: stickerURL), completed: nil)
+        } else if let sticker = stickers[indexPath.item] as? UIImage {
+            cell.stickerImage.image = sticker
+        }
+
         return cell
     }
     
