@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
+@objcMembers class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var holdView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -21,7 +21,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     var emojisDelegate: EmojisCollectionViewDelegate!
     
     var stickers: [Any] = []
-    var stickersViewControllerDelegate : StickersViewControllerDelegate?
+    weak var stickersViewControllerDelegate : StickersViewControllerDelegate?
     
     let screenSize = UIScreen.main.bounds.size
     
