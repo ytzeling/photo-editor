@@ -1,5 +1,5 @@
 PODS:
-  - iOSPhotoEditor (0.6):
+  - iOSPhotoEditor (0.6.1):
     - SDWebImage
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
@@ -17,9 +17,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  iOSPhotoEditor: 730a4d4a2aad6923525467947948c4768ec2d3e8
+  iOSPhotoEditor: 9a9b40f3dd21589be19c0235087077d5a9c3f639
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  
+PODFILE CHECKSUM: 5508a371c29621c7f47289319e08562197256b3d
 
-PODFILE CHECKSUM: 01caa5bdc3b56815841a7c7bede876416625235a
-
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.1
